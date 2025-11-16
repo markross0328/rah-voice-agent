@@ -1,0 +1,7 @@
+franchise_id: default
+notice_windows:
+  cancel_hours: 12
+overtime_limits:
+  max_hours_week: 40
+dnd:
+  caregiver_default: "22:00-06:00"

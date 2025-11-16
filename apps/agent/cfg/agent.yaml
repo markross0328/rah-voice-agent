@@ -1,0 +1,4 @@
+# Agent config (models, thresholds, timeouts)
+model: gpt-4o-realtime-preview
+intent_model: gpt-4o-mini
+max_latency_ms: 1500

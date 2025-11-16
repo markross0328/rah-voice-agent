@@ -1,0 +1,10 @@
+{
+  "ignore": [
+    "data/**",
+    "offline/reports/**",
+    "storage/sql/**"
+  ],
+  "test": {
+    "command": "pytest -q"
+  }
+}

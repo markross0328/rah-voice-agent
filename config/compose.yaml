@@ -1,0 +1,28 @@
+version: "3.9"
+services:
+  agent:
+    build: ./apps/agent
+    env_file: .env
+    environment:
+      - WELLSKY_ADAPTER_URL=${WELLSKY_ADAPTER_URL}
+      - SCHEDULER_URL=${SCHEDULER_URL}
+      - NOTIFIER_URL=${NOTIFIER_URL}
+    depends_on:
+      - wellsky-adapter
+      - scheduler
+      - notifier
+
+  wellsky-adapter:
+    build: ./services/wellsky_adapter
+    ports:
+      - "7001:7001"
+
+  scheduler:
+    build: ./services/scheduler
+    ports:
+      - "7002:7002"
+
+  notifier:
+    build: ./services/notifier
+    ports:
+      - "7003:7003"
